@@ -10,16 +10,23 @@
     <header>
       <nav>
         <ul>
-          <li><a href="#">Accueil</a></li>
+          <li><a href="index.html">Accueil</a></li>
           <li><a href="galerie.html">Galerie</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <main>
-      <h1>Bienvenue sur mon portfolio</h1>
-      <p>Je suis un graphics designer et un developpeur web.</p>
-      <p>Vous pouvez trouver mes projets precedents dans la galerie.</p>
+    <main class="contact-form">
+      <h1>Contactez-moi</h1>
+      <form method="post" action="mailer.php">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+        <input type="submit" value="Envoyer" />
+      </form>
     </main>
     <footer>
       <p>
