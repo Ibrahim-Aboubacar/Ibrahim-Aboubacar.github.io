@@ -5,6 +5,7 @@ export default {
         fontFamily: {
             roboto: ["Roboto", "sans-serif"],
             poppins: ["Poppins", "serif"],
+            fira: ["'Fira mono'", "monospace"],
         },
         extend: {},
     },

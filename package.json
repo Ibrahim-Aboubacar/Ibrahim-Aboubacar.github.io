@@ -1,5 +1,5 @@
 {
-    "name": "ibrahim-aboubacar-ibrahim-portofolio",
+    "name": "ibrahim-aboubacar-ibrahim-portfolio",
     "private": true,
     "version": "0.0.0",
     "type": "module",
@@ -11,6 +11,7 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "framer-motion": "^11.3.6",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "react-router-dom": "^6.24.1"
