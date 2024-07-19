@@ -8,26 +8,23 @@ const NameExplanationTypes = {
     setShowNameExplanation: PropTypes.func
 };
 function NameExplanation({ showNameExplanation, setShowNameExplanation }) {
-
-
-    const [showNameExplanationClasses, setShowNameExplanationClasses] = useState("absolute top-full mt-2 w-[700px]");
+    const [showNameExplanationClasses, setShowNameExplanationClasses] = useState(" absolute top-full mt-2 w-[700px] ");
     const [isFullScreen, setIsFullScreen] = useState(false);
 
     const MakeNameExplanationClassesFullScreen = () => {
-        setShowNameExplanationClasses("fixed inset-0")
+        setShowNameExplanationClasses(" fixed inset-1 z-[999] ")
         setIsFullScreen(true)
     }
 
     const MakeNameExplanationClassesSmall = () => {
-        setShowNameExplanationClasses("absolute top-full mt-2 w-[700px]")
+        setShowNameExplanationClasses(" absolute top-full mt-2 w-[700px] ")
         setIsFullScreen(false)
     }
     const inialStage = {
         opacity: 0,
         y: -10,
-        skewX: "10deg",
-        scale: 0.9,
-        transformOrigine: "left",
+        skewX: "5deg",
+        scale: 0.2,
     };
     const NameExplanationAnimation = {
         hidden: inialStage,
@@ -40,13 +37,11 @@ function NameExplanation({ showNameExplanation, setShowNameExplanation }) {
         exit: inialStage
     };
 
-
-
     return (
         <AnimatePresence>
             {showNameExplanation && (
-                <motion.div initial="hidden" animate="animate" exit="exit" variants={NameExplanationAnimation} className={showNameExplanationClasses + " " + (" rounded-md font-normal bg-slate-900 text-slate-500 text-wrap overflow-hidden selection:bg-slate-600/70 selection:text-slate-300/70")}>
-                    <div className="flex items-center justify-between bg-slate-900 text-slate-300/80 border-b-2 border-slate-950">
+                <motion.div initial="hidden" animate="animate" exit="exit" variants={NameExplanationAnimation} className={showNameExplanationClasses + " " + (" rounded-md font-normal bg-slate-900 flex flex-col text-slate-500 text-wrap overflow-hidden selection:bg-slate-600/70 selection:text-slate-300/70 origin-top-left")}>
+                    <div className="flex items-center justify-between border-b-2 border-slate-950 bg-slate-900 text-slate-300/80">
                         <div className="pl-5">
                             <span className="font-semibold">
                                 <span className="selection:text-orange-500">
@@ -69,26 +64,24 @@ function NameExplanation({ showNameExplanation, setShowNameExplanation }) {
                             </span>
                             <span>{" explained"}</span>
                         </div>
-                        <div className="grid grid-cols-3 grid-rows-[64px] cursor-pointer">
-                            <div onClick={() => { setShowNameExplanation(false); MakeNameExplanationClassesSmall() }} className="flex justify-center items-center hover:bg-slate-700/30 w-14">
+                        <div className="grid cursor-pointer grid-cols-3 grid-rows-[64px]">
+                            <div onClick={() => { setShowNameExplanation(false); MakeNameExplanationClassesSmall() }} className="flex w-14 items-center justify-center hover:bg-slate-700/30">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
                                 </svg>
                             </div>
                             {isFullScreen ? (
-                                <div onClick={MakeNameExplanationClassesSmall} className="flex justify-center items-center hover:bg-slate-700/30 w-14">
+                                <div onClick={MakeNameExplanationClassesSmall} className="flex w-14 items-center justify-center hover:bg-slate-700/30">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6" />
                                     </svg>
                                 </div>
                             ) : (
-                                <div onClick={MakeNameExplanationClassesFullScreen} className="flex justify-center items-center hover:bg-slate-700/30 w-14">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6" />
-                                    </svg>
+                                <div onClick={MakeNameExplanationClassesFullScreen} className="flex w-14 items-center justify-center hover:bg-slate-700/30">
+                                    <span className="inline-block h-3 w-4 rounded-sm border-2 border-current"></span>
                                 </div>
                             )}
-                            <div onClick={() => { setShowNameExplanation(false); MakeNameExplanationClassesSmall() }} className="flex justify-center items-center hover:bg-red-600 w-14">
+                            <div onClick={() => { setShowNameExplanation(false); MakeNameExplanationClassesSmall() }} className="flex w-14 items-center justify-center hover:bg-red-600">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-5">
                                     <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
                                 </svg>
@@ -156,8 +149,8 @@ function NameExplanation({ showNameExplanation, setShowNameExplanation }) {
                             </span>
                         </p>
                     </div>
-                    <div className="px-5 py-5 bg-slate-800">
-                        <a href="#" className="inline-flex gap-1 items-center text-cyan-600 hover:text-cyan-500 font-medium">
+                    <div className="mt-auto bg-slate-800 px-5 py-5">
+                        <a href="#" className="inline-flex items-center gap-1 font-medium text-cyan-600 hover:text-cyan-500">
                             <span>Download my CV</span>
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-5">
@@ -172,6 +165,5 @@ function NameExplanation({ showNameExplanation, setShowNameExplanation }) {
     );
 }
 NameExplanation.propTypes = NameExplanationTypes;
-
 
 export default NameExplanation;

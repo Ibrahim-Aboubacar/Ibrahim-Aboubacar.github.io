@@ -6,13 +6,11 @@ import Header from './components/Header.jsx'
 
 import './assets/css/tailwind.css'
 
-
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <div className="w-screen h-screen bg-gray-200">
+      <div className="h-screen w-screen bg-gray-200">
         <Header />
         <App />
       </div>

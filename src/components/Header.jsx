@@ -15,17 +15,15 @@ function Header() {
     const activeClassNames = "font-bold text-orange-600"
     const nonActiveClassNames = "font-bold text-slate-500"
 
-
-
     const getClassNames = (path) => {
-        let ClassNames = "hover:bg-slate-100 hover:shadow rounded-md transition-all px-4 py-2 ";
+        let ClassNames = "hover:bg-slate-100 hover:shadow rounded-md transition-all px-4 py-2 text-nowrap ";
         if (location.pathname === path) return ClassNames + activeClassNames
         return ClassNames + nonActiveClassNames
     }
     return (
-        <div className="pt-4 px-4">
-            <div className="text-center py-5">
-                <p className="text-xl font-fira font-medium">
+        <header className="_absolute fixed left-0 right-0 top-0 z-[999] p-4">
+            <div className="py-5 text-center">
+                <p className="font-fira text-xl font-medium">
                     <span className="text-rose-800">{"<"}</span>
                     <span className="text-rose-700">{"Ibrahim"}</span>
                     <span className="text-rose-800">{">"}</span>
@@ -35,12 +33,13 @@ function Header() {
                     <span className="text-rose-800">{"/>"}</span>
                 </p>
             </div>
-            <header className="max-w-screen-lg mx-auto rounded-md bg-gray-50 shadow h-16 text-slate-900 pl-6 pr-4 font-poppins">
-                <nav className="flex gap-4 justify-between h-full">
-                    <div className="h-full flex items-center">
-                        <div className="relative text-xl font-medium font-fira text-nowrap group">
+            <div className="relative mx-auto h-16 max-w-screen-xl rounded-[20px] pl-6 pr-2 font-poppins text-slate-900 shadow">
+                <span className="absolute inset-0 z-[-1] rounded-[20px] bg-gray-50/60 backdrop-blur-md"></span>
+                <nav className="flex h-full justify-between gap-4">
+                    <div className="flex h-full items-center">
+                        <div className="text-nowrap font-fira text-xl font-medium">
                             {/* Logo */}
-                            <div onMouseOver={handelMouseOver} className="selection:bg-slate-950/10 font-semibold">
+                            <div onMouseOver={handelMouseOver} className="font-semibold selection:bg-slate-950/10">
                                 <span className="selection:text-orange-500">
                                     <span className="text-rose-900">{"<"}</span>
                                     <span className="text-rose-700">{"Ib"}</span>
@@ -63,7 +62,7 @@ function Header() {
                         </div>
                     </div>
 
-                    <ul className="flex gap-5 h-full items-center">
+                    <ul className="hidden h-full items-center md:flex md:gap-0 lg:gap-5">
                         <li>
                             <NavLink to="/" className={getClassNames("/")}>
                                 Home
@@ -86,15 +85,13 @@ function Header() {
                         </li>
                     </ul>
 
-                    <ul className="flex gap-10 h-full items-center">
-                        <li><Link to="/contact" className="px-6 py-2 rounded-md bg-orange-600 text-orange-50 font-semibold" >Contact me</Link></li>
+                    <ul className="flex h-full items-center gap-10">
+                        <li><Link to="/contact" className="text-nowrap rounded-xl bg-orange-600 px-5 py-3 text-lg font-semibold text-orange-50 lg:px-10" >Contact me</Link></li>
                     </ul>
                 </nav>
-            </header>
-        </div>
+            </div>
+        </header>
     );
 }
-
-
 
 export default Header;
