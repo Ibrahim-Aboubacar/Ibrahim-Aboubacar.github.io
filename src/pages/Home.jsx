@@ -1,9 +1,11 @@
 import HeroSection from "../components/HeroSection";
+import MyWork from "../components/MyWork";
 
 function Home() {
     return (
         <main className="">
             <HeroSection />
+            <MyWork />
             <div className="relative">
                 <div className="relative z-10 mx-auto max-w-screen-xl px-4">
                     <h1>Home</h1>

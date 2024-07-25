@@ -1,0 +1,82 @@
+{
+    "php": {
+        "icon": "php.svg",
+        "site_url": "https://php.net/"
+    },
+    "laravel": {
+        "icon": "laravel.svg",
+        "site_url": "https://laravel.com/"
+    },
+    "html": {
+        "icon": "html.png",
+        "site_url": "https://www.w3schools.com/html/"
+    },
+    "jquery": {
+        "icon": "jquery.png",
+        "site_url": "https://jquery.com"
+    },
+    "git": {
+        "icon": "git.png",
+        "site_url": "https://git-scm.com/"
+    },
+    "bootstrap": {
+        "icon": "bootstrap.svg",
+        "site_url": "https://getbootstrap.com"
+    },
+    "css3": {
+        "icon": "css3.svg",
+        "site_url": "https://www.w3.org/Style/CSS/Overview.en.html"
+    },
+    "css": {
+        "icon": "css3.svg",
+        "site_url": "https://www.w3.org/Style/CSS/Overview.en.html"
+    },
+    "filezilla": {
+        "icon": "filezilla.svg",
+        "site_url": "https://filezilla-project.org/"
+    },
+    "js": {
+        "icon": "javascript.svg",
+        "site_url": "https://www.javascript.com/"
+    },
+    "ts": {
+        "icon": "typescript.svg",
+        "site_url": "https://www.typescriptlang.org/"
+    },
+    "mysql": {
+        "icon": "mysql.svg",
+        "site_url": "https://www.mysql.com/"
+    },
+    "windows": {
+        "icon": "windows.svg",
+        "site_url": "https://www.microsoft.com/en-us/windows/"
+    },
+    "composer": {
+        "icon": "composer.png",
+        "site_url": "https://getcomposer.org/"
+    },
+    "premierepro": {
+        "icon": "adobe-premiere-pro.svg",
+        "site_url": "https://"
+    },
+    "vscode": {
+        "icon": "visual-studio-code.svg",
+        "site_url": "https://code.visualstudio.com/"
+    },
+    "apache": {
+        "icon": "apache.svg",
+        "site_url": "https://httpd.apache.org/"
+    },
+    "react.js": {
+        "icon": "react.svg",
+        "site_url": "https://react.dev"
+    },
+    "alpine.js": {
+        "icon": "alpine.svg",
+        "site_url": "https://alpine.dev"
+    },
+    "wordpress": {
+        "icon": "wordpress.svg",
+        "site_url": "https://wordpress.org/"
+    }
+}

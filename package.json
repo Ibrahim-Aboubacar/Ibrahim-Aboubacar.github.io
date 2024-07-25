@@ -4,7 +4,7 @@
     "version": "0.0.0",
     "type": "module",
     "scripts": {
-        "dev": "vite --host",
+        "dev": "vite --host --port=5500",
         "css": "npx tailwindcss -i ./src/assets/css/input.css -o ./src/assets/css/tailwind.css --watch",
         "build": "vite build",
         "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",

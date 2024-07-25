@@ -21,7 +21,7 @@ function HeroSection() {
         };
     }, []);
     return (
-        <section className="relative overflow-hidden bg-gradient-to-r from-orange-200 to-violet-200 pb-20 pt-48 font-poppins text-slate-800">
+        <section className="relative overflow-hidden bg-gradient-to-r from-orange-200 to-violet-200 pt-48 font-poppins text-slate-800">
             <div className="relative z-10 mx-auto max-w-screen-xl px-4">
                 <div className="grid grid-cols-1 justify-center md:grid-cols-2">
                     <div className="flex flex-col justify-center px-10 md:px-0">
