@@ -19,6 +19,10 @@
         "icon": "git.png",
         "site_url": "https://git-scm.com/"
     },
+    "tailwindcss": {
+        "icon": "tailwindcss.svg",
+        "site_url": "https://tailwindcss.com/"
+    },
     "bootstrap": {
         "icon": "bootstrap.svg",
         "site_url": "https://getbootstrap.com"

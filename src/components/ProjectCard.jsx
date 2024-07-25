@@ -2,6 +2,13 @@ import * as PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import ToolImage from "./ToolImage";
 
+const ProjectCardPropTypes = {
+    image: PropTypes.string,
+    type: PropTypes.string,
+    title: PropTypes.string,
+    children: PropTypes.node,
+    tools: PropTypes.array,
+};
 export default function ProjectCard({ image = '', type = 'dev', title = 'Logo design for Hadi Delice', children = 'lorem', tools = [] }) {
 
     return (
@@ -18,12 +25,12 @@ export default function ProjectCard({ image = '', type = 'dev', title = 'Logo de
             </div>
             <div className="flex-1 p-3">
                 <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-lg bg-slate-100 shadow-2xl transition-all duration-500 group-hover:shadow-sm">
-                    <div className="p-4">
-                        <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-slate-500">
+                    <div className="p-6">
+                        <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-violet-300 shadow-2xl shadow-violet-200">
                             <div className="h-full w-full">
                                 <img className="h-full w-full object-cover" src={image || ("https://via.assets.so/img.jpg?w=900&h=450&tc=orange&bg=gray&t=" + (type == 'dev' ? "DEV" : "GRAPHIC"))} />
                             </div>
-                            <div className={"absolute bottom-2 left-2 flex w-[44px] items-center gap-2 overflow-hidden rounded-[5px] bg-slate-700/50 p-3 text-sm font-bold text-slate-50 transition-all duration-500" + " " + (type == 'dev' ? "group-hover:w-[158px]" : "group-hover:w-[168px]")}>
+                            <div className={"absolute bottom-2 left-2 flex w-[44px] items-center gap-2 overflow-hidden rounded-[5px] bg-slate-700/50 p-3 text-sm font-bold text-slate-50 transition-all duration-500 group-hover:bg-orange-600/50" + " " + (type == 'dev' ? "group-hover:w-[158px]" : "group-hover:w-[168px]")}>
                                 <span>
                                     {type == 'dev' ? (
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="size-5">
@@ -40,9 +47,9 @@ export default function ProjectCard({ image = '', type = 'dev', title = 'Logo de
                                 </p>
                             </div>
                         </div>
-                        <div className="mt-4 font-roboto">
-                            <h3 className="text-xl font-extrabold text-slate-700">{title}</h3>
-                            <p className="mt-2 text-slate-500">{children}</p>
+                        <div className="mt-6 font-roboto">
+                            <h3 className="text-2xl font-extrabold text-slate-700">{title}</h3>
+                            <p className="mt-4 text-slate-500">{children}</p>
                         </div>
                     </div>
 
@@ -56,11 +63,5 @@ export default function ProjectCard({ image = '', type = 'dev', title = 'Logo de
         </motion.div>
     )
 }
-const ProjectCardPropTypes = {
-    image: PropTypes.string,
-    type: PropTypes.string,
-    title: PropTypes.string,
-    children: PropTypes.string,
-    tools: PropTypes.array,
-};
+
 ProjectCard.propTypes = ProjectCardPropTypes;
