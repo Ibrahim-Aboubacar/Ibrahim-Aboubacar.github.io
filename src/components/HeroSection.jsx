@@ -5,7 +5,6 @@ import { useRef, useEffect } from 'react';
 import img from '../assets/imgs/portrait-jeune-homme-expressif-portant-costume-formel.png'
 function HeroSection() {
     const el = useRef(null);
-    console.log(img);
     useEffect(() => {
         const typed = new Typed(el.current, {
             strings: ['^700 I am Ibrahim Aboubacar Ibrahim', ' I am a <span class="text-orange-600">graphics designer</span>', 'I am a <span class="text-orange-600">web developer</span>', 'I am a <span class="text-orange-600">full stack developer</span>'],

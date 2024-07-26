@@ -17,6 +17,7 @@ function Header() {
 
     const getClassNames = (path) => {
         let ClassNames = "hover:bg-slate-100 hover:shadow rounded-md transition-all px-4 py-2 text-nowrap ";
+        if (path == '/' && location.pathname == '/index.html') return ClassNames + activeClassNames
         if (location.pathname === path) return ClassNames + activeClassNames
         return ClassNames + nonActiveClassNames
     }
