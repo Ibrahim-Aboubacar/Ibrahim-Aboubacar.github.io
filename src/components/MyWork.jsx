@@ -32,7 +32,7 @@ export default function MyWork() {
                         Check out some of my latest Web Development and Graphic Design projects.
                     </p>
                 </div>
-                <div className="text-nowrap_ flex select-none items-center justify-center py-10 font-roboto font-semibold text-slate-700 sm:text-xl">
+                <div className="sticky z-10 flex select-none items-center justify-center py-10 font-roboto font-semibold text-slate-700 [inset-block-start:65px] sm:text-xl">
                     <div className="relative grid grid-cols-3 items-center gap-5 rounded-[20px] bg-gradient-to-tr from-orange-300 to-violet-300 px-3 py-5 text-center shadow-md shadow-violet-200">
                         <div className="absolute inset-0 p-5">
                             <span className={"absolute bottom-0 top-0 z-[1] w-1/3 px-[10px] py-2 transition-all duration-700" + " " + (currentTabClasses)}>

@@ -3,7 +3,7 @@ import MyWork from "../components/MyWork";
 
 function Home() {
     return (
-        <main className="">
+        <main className="mt-[-165px]">
             <HeroSection />
             <MyWork />
             <div className="relative">

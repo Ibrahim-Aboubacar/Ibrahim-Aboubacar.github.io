@@ -21,7 +21,7 @@ function Header() {
         return ClassNames + nonActiveClassNames
     }
     return (
-        <header className="_absolute fixed left-0 right-0 top-0 z-[999] p-4">
+        <header className="sticky left-0 right-0 top-0 z-[999] p-4 [inset-block-start:-60px]">
             <div className="py-5 text-center">
                 <p className="font-fira text-xl font-medium">
                     <span className="text-rose-800">{"<"}</span>
