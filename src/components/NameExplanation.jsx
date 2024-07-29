@@ -40,24 +40,24 @@ function NameExplanation({ showNameExplanation, setShowNameExplanation }) {
     return (
         <AnimatePresence>
             {showNameExplanation && (
-                <motion.div initial="hidden" animate="animate" exit="exit" variants={NameExplanationAnimation} className={showNameExplanationClasses + " " + (" rounded-md font-normal bg-slate-900 flex flex-col text-slate-500 text-wrap overflow-hidden selection:bg-slate-600/70 selection:text-slate-300/70 origin-top-left")}>
+                <motion.div initial="hidden" animate="animate" exit="exit" variants={NameExplanationAnimation} className={showNameExplanationClasses + " " + (" rounded-md font-normal bg-slate-900 flex flex-col text-slate-500 text-wrap  selection:bg-slate-600/70 selection:text-slate-300/70 overflow-hidden origin-top-left")}>
                     <div className="flex items-center justify-between border-b-2 border-slate-950 bg-slate-900 text-slate-300/80">
                         <div className="pl-5">
                             <span className="font-semibold">
-                                <span className="selection:text-orange-500">
+                                <span className="selection:!text-orange-500">
                                     <span>{"<"}</span>
                                     <span>{"Ib"}</span>
                                 </span>
-                                <span className="selection:text-white">
+                                <span className="selection:!text-white">
                                     <span>{"r"}</span>
                                 </span>
-                                <span className="selection:text-orange-500">
+                                <span className="selection:!text-orange-500">
                                     <span>{"a"}</span>
                                 </span>
-                                <span className="selection:text-white">
+                                <span className="selection:!text-white">
                                     <span>{"h"}</span>
                                 </span>
-                                <span className="selection:text-green-500">
+                                <span className="selection:!text-green-500">
                                     <span>{"im"}</span>
                                     <span>{" />"}</span>
                                 </span>
@@ -92,20 +92,20 @@ function NameExplanation({ showNameExplanation, setShowNameExplanation }) {
                         <p className="mb-4">
                             <span>{"The "}</span>
                             <span className="text-slate-400 hover:text-slate-300">
-                                <span className="selection:text-orange-500">
+                                <span className="selection:!text-orange-500">
                                     <span>{"<"}</span>
                                     <span>{"Ib"}</span>
                                 </span>
-                                <span className="selection:text-white">
+                                <span className="selection:!text-white">
                                     <span>{"r"}</span>
                                 </span>
-                                <span className="selection:text-orange-500">
+                                <span className="selection:!text-orange-500">
                                     <span>{"a"}</span>
                                 </span>
-                                <span className="selection:text-white">
+                                <span className="selection:!text-white">
                                     <span>{"h"}</span>
                                 </span>
-                                <span className="selection:text-green-500">
+                                <span className="selection:!text-green-500">
                                     <span>{"im"}</span>
                                     <span>{" />"}</span>
                                 </span>
