@@ -2,6 +2,7 @@ import { useState } from "react";
 import * as PropTypes from "prop-types";
 import { motion, AnimatePresence } from "framer-motion";
 import OutLink from "./OutLink";
+import MyCv from "../assets/files/CV_Ibrahim_Aboubacar_Ibrahim.pdf";
 
 const NameExplanationTypes = {
     showNameExplanation: PropTypes.bool,
@@ -10,6 +11,7 @@ const NameExplanationTypes = {
 function NameExplanation({ showNameExplanation, setShowNameExplanation }) {
     const [showNameExplanationClasses, setShowNameExplanationClasses] = useState(" absolute top-full mt-2 w-[700px] ");
     const [isFullScreen, setIsFullScreen] = useState(false);
+    const [cvIsDownloaded, setCvIsDownloaded] = useState(!false);
 
     const MakeNameExplanationClassesFullScreen = () => {
         setShowNameExplanationClasses(" fixed inset-1 z-[999] ")
@@ -36,6 +38,15 @@ function NameExplanation({ showNameExplanation, setShowNameExplanation }) {
         },
         exit: inialStage
     };
+
+    const cvDownloaded = () => {
+        setTimeout(() => {
+            setCvIsDownloaded(true);
+            setTimeout(() => {
+                setCvIsDownloaded(false);
+            }, 3500);
+        }, 500);
+    }
 
     return (
         <AnimatePresence>
@@ -149,8 +160,8 @@ function NameExplanation({ showNameExplanation, setShowNameExplanation }) {
                             </span>
                         </p>
                     </div>
-                    <div className="mt-auto bg-slate-800 px-5 py-5">
-                        <a href="#" className="inline-flex items-center gap-1 font-medium text-cyan-600 hover:text-cyan-500">
+                    <div className="mt-auto bg-slate-800 px-5 py-0">
+                        <a href={MyCv} download={true} onClick={cvDownloaded} className="inline-flex items-center gap-1 py-5 font-medium text-cyan-600 hover:text-cyan-500">
                             <span>Download my CV</span>
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-5">
@@ -158,6 +169,15 @@ function NameExplanation({ showNameExplanation, setShowNameExplanation }) {
                                 </svg>
                             </span>
                         </a>
+                        <AnimatePresence>
+                            {cvIsDownloaded && <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                onClick={() => setCvIsDownloaded(false)} className="ml-5 inline-flex items-center justify-center rounded-xl border-2 border-green-700 px-5 py-2 ring-2 ring-green-600">
+                                <p className="text-sm font-medium text-green-500">CV downloaded! Thank you!</p>
+                            </motion.div>}
+                        </AnimatePresence>
                     </div>
                 </motion.div>
             )}
