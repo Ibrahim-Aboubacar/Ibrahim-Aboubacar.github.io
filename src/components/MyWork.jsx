@@ -22,7 +22,8 @@ export default function MyWork() {
         setWorkToShow(tab == 'all' ? '*' : tab);
     };
     return (
-        <section id="projects" className="bg-gradient-to-tr from-orange-100 to-violet-200 py-16">
+        <section id="projects" className="relative bg-gradient-to-tr from-orange-100 to-violet-200 py-16">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-violet-200" style={{ backgroundSize: 40, backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='2' height='2' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f27e02' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E\")" }}></div>
             <div className="mx-auto max-w-screen-xl px-4 pt-10">
                 <div className="py-10 font-poppins">
                     <h2 className="text-center text-5xl font-bold text-slate-800">
