@@ -69,25 +69,25 @@ function Header() {
                                 Home
                             </NavLink>
                         </li>
-                        <li>
-                            <NavLink to="/about" className={getClassNames("/about")}>
+                        {/* <li>
+                            <NavLink to="/#" className={getClassNames("/#about")}>
                                 About
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/services" className={getClassNames("/services")}>
+                            <NavLink to="/#" className={getClassNames("/#services")}>
                                 Services
                             </NavLink>
-                        </li>
+                        </li> */}
                         <li>
-                            <NavLink to="/projects" className={getClassNames("/projects")}>
-                                My Projects
-                            </NavLink>
+                            <a href="/#projects" className={getClassNames("/#projects")}>
+                                My Recent Projects
+                            </a>
                         </li>
                     </ul>
 
                     <ul className="flex h-full items-center gap-10">
-                        <li><Link to="/contact" className="text-nowrap rounded-xl bg-orange-600 px-5 py-3 text-lg font-semibold text-orange-50 lg:px-10" >Contact me</Link></li>
+                        <li><Link to="/#contact" className="text-nowrap rounded-xl bg-orange-600 px-5 py-3 text-lg font-semibold text-orange-50 lg:px-10" >Contact me</Link></li>
                     </ul>
                 </nav>
             </div>

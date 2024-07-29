@@ -1279,6 +1279,11 @@ video {
   padding-bottom: 0px;
 }
 
+.py-14{
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
 .pb-4{
   padding-bottom: 1rem;
 }
@@ -1313,6 +1318,10 @@ video {
 
 .pt-8{
   padding-top: 2rem;
+}
+
+.pt-10{
+  padding-top: 2.5rem;
 }
 
 .text-center{

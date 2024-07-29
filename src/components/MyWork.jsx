@@ -22,8 +22,8 @@ export default function MyWork() {
         setWorkToShow(tab == 'all' ? '*' : tab);
     };
     return (
-        <section className="bg-gradient-to-tr from-orange-100 to-violet-200 py-16">
-            <div className="mx-auto max-w-screen-xl px-4">
+        <section id="projects" className="bg-gradient-to-tr from-orange-100 to-violet-200 py-16">
+            <div className="mx-auto max-w-screen-xl px-4 pt-10">
                 <div className="py-10 font-poppins">
                     <h2 className="text-center text-5xl font-bold text-slate-800">
                         Recent Projects
@@ -32,7 +32,7 @@ export default function MyWork() {
                         Check out some of my latest Web Development and Graphic Design projects.
                     </p>
                 </div>
-                <div className="sticky z-10 flex select-none items-center justify-center py-10 font-roboto font-semibold text-slate-700 [inset-block-start:65px] sm:text-xl">
+                <div className="sticky z-10 flex select-none items-center justify-center py-14 font-roboto font-semibold text-slate-700 [inset-block-start:65px] sm:text-xl">
                     <div className="relative grid grid-cols-3 items-center gap-5 rounded-[20px] bg-gradient-to-tr from-orange-300 to-violet-300 px-3 py-5 text-center shadow-md shadow-violet-200">
                         <div className="absolute inset-0 p-5">
                             <span className={"absolute bottom-0 top-0 z-[1] w-1/3 px-[10px] py-2 transition-all duration-700" + " " + (currentTabClasses)}>
