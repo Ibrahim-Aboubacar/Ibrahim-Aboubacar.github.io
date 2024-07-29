@@ -11,7 +11,7 @@ const NameExplanationTypes = {
 function NameExplanation({ showNameExplanation, setShowNameExplanation }) {
     const [showNameExplanationClasses, setShowNameExplanationClasses] = useState(" absolute top-full mt-2 w-[700px] ");
     const [isFullScreen, setIsFullScreen] = useState(false);
-    const [cvIsDownloaded, setCvIsDownloaded] = useState(!false);
+    const [cvIsDownloaded, setCvIsDownloaded] = useState(false);
 
     const MakeNameExplanationClassesFullScreen = () => {
         setShowNameExplanationClasses(" fixed inset-1 z-[999] ")

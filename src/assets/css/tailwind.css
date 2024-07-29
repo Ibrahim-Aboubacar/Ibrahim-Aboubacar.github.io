@@ -644,6 +644,18 @@ video {
   top: 100%;
 }
 
+.bottom-8{
+  bottom: 2rem;
+}
+
+.left-8{
+  left: 2rem;
+}
+
+.top-48{
+  top: 12rem;
+}
+
 .z-0{
   z-index: 0;
 }
@@ -715,6 +727,14 @@ video {
 
 .ml-5{
   margin-left: 1.25rem;
+}
+
+.mt-3{
+  margin-top: 0.75rem;
+}
+
+.mr-auto{
+  margin-right: auto;
 }
 
 .block{
@@ -935,6 +955,10 @@ video {
 
 .gap-5{
   gap: 1.25rem;
+}
+
+.gap-20{
+  gap: 5rem;
 }
 
 .self-center{
@@ -1334,6 +1358,14 @@ video {
   padding-top: 2.5rem;
 }
 
+.pb-10{
+  padding-bottom: 2.5rem;
+}
+
+.pb-28{
+  padding-bottom: 7rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -1388,6 +1420,16 @@ video {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .font-black{
@@ -1863,6 +1905,38 @@ html {
 }
 
 @media (min-width: 640px){
+  .sm\:top-52{
+    top: 13rem;
+  }
+
+  .sm\:right-4{
+    right: 1rem;
+  }
+
+  .sm\:right-14{
+    right: 3.5rem;
+  }
+
+  .sm\:top-56{
+    top: 14rem;
+  }
+
+  .sm\:top-72{
+    top: 18rem;
+  }
+
+  .sm\:ml-3{
+    margin-left: 0.75rem;
+  }
+
+  .sm\:block{
+    display: block;
+  }
+
+  .sm\:hidden{
+    display: none;
+  }
+
   .sm\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -1870,8 +1944,52 @@ html {
 }
 
 @media (min-width: 768px){
+  .md\:bottom-32{
+    bottom: 8rem;
+  }
+
+  .md\:left-40{
+    left: 10rem;
+  }
+
+  .md\:top-52{
+    top: 13rem;
+  }
+
+  .md\:right-0{
+    right: 0px;
+  }
+
+  .md\:left-0{
+    left: 0px;
+  }
+
+  .md\:bottom-5{
+    bottom: 1.25rem;
+  }
+
+  .md\:mt-5{
+    margin-top: 1.25rem;
+  }
+
+  .md\:mr-0{
+    margin-right: 0px;
+  }
+
+  .md\:ml-0{
+    margin-left: 0px;
+  }
+
   .md\:flex{
     display: flex;
+  }
+
+  .md\:hidden{
+    display: none;
+  }
+
+  .md\:min-h-\[unset\]{
+    min-height: unset;
   }
 
   .md\:grid-cols-2{
@@ -1882,13 +2000,62 @@ html {
     gap: 0px;
   }
 
+  .md\:overflow-auto{
+    overflow: auto;
+  }
+
+  .md\:overflow-visible{
+    overflow: visible;
+  }
+
+  .md\:overscroll-none{
+    overscroll-behavior: none;
+  }
+
   .md\:px-0{
     padding-left: 0px;
     padding-right: 0px;
   }
+
+  .md\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .md\:pb-10{
+    padding-bottom: 2.5rem;
+  }
+
+  .md\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
+  }
 }
 
 @media (min-width: 1024px){
+  .lg\:top-64{
+    top: 16rem;
+  }
+
+  .lg\:right-6{
+    right: 1.5rem;
+  }
+
   .lg\:gap-5{
     gap: 1.25rem;
   }
@@ -1896,5 +2063,10 @@ html {
   .lg\:px-10{
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .lg\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
   }
 }
