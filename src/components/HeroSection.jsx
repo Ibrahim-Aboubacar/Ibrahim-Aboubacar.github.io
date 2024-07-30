@@ -1,9 +1,12 @@
 import Typed from 'typed.js';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import * as PropTypes from "prop-types";
 import { useRef, useEffect } from 'react';
 import img from '../assets/imgs/portrait-jeune-homme-expressif-portant-costume-formel.png'
+import useContact from '../hooks/useContact';
 function HeroSection() {
+    const { whatsappLink } = useContact();
+
     const el = useRef(null);
     useEffect(() => {
         const typed = new Typed(el.current, {
@@ -38,7 +41,7 @@ function HeroSection() {
                             </p>
                         </div>
                         <div className="mt-10">
-                            <Link to="/contact" className="rounded-xl bg-orange-600 px-10 py-4 text-xl font-semibold text-orange-50" >Hire Me</Link>
+                            <a href={whatsappLink} target='_blank' className="rounded-xl bg-orange-600 px-10 py-4 text-xl font-semibold text-orange-50 transition-colors hover:bg-orange-700" >Hire Me</a>
                         </div>
                     </div>
                     <div className='hiddenmd: relative flex'>

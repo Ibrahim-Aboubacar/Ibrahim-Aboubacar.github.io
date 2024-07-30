@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import NameExplanation from "./NameExplanation"
+import useContact from "../hooks/useContact";
 
 function Header() {
+    const { whatsappLink } = useContact();
     const [showNameExplanation, setShowNameExplanation] = useState(false);
 
     const handelMouseOver = () => {
@@ -24,7 +26,7 @@ function Header() {
     return (
         <header className="sticky left-0 right-0 top-0 z-[999] p-4 [inset-block-start:-60px]">
             <div className="py-5 text-center">
-                <p className="font-fira text-xl font-medium">
+                <p className="font-fira text-lg font-medium sm:text-xl">
                     <span className="text-rose-800">{"<"}</span>
                     <span className="text-rose-700">{"Ibrahim"}</span>
                     <span className="text-rose-800">{">"}</span>
@@ -34,11 +36,11 @@ function Header() {
                     <span className="text-rose-800">{"/>"}</span>
                 </p>
             </div>
-            <div className="relative mx-auto h-16 max-w-screen-xl rounded-[20px] pl-6 pr-2 font-poppins text-slate-900 shadow">
-                <span className="absolute inset-0 z-[-1] rounded-[20px] bg-gray-50/60 backdrop-blur-md"></span>
+            <div className="relative mx-auto h-10 max-w-screen-xl rounded-[15px] pl-6 pr-2 font-poppins text-slate-900 shadow sm:h-16 sm:rounded-[20px]">
+                <span className="absolute inset-0 z-[-1] rounded-[15px] bg-gray-50/60 backdrop-blur-md sm:rounded-[20px]"></span>
                 <nav className="flex h-full justify-between gap-4">
                     <div className="flex h-full items-center">
-                        <div className="text-nowrap font-fira text-xl font-medium">
+                        <div className="text-nowrap font-fira font-medium sm:text-xl">
                             {/* Logo */}
                             <div onMouseOver={handelMouseOver} className="font-semibold selection:bg-slate-950/10">
                                 <span className="selection:text-orange-500">
@@ -87,7 +89,7 @@ function Header() {
                     </ul>
 
                     <ul className="flex h-full items-center gap-10">
-                        <li><Link to="/#contact" className="text-nowrap rounded-xl bg-orange-600 px-5 py-3 text-lg font-semibold text-orange-50 lg:px-10" >Contact me</Link></li>
+                        <li><a href={whatsappLink} target="_blank" className="text-nowrap rounded-xl bg-orange-600 px-3 py-[5px] text-sm font-semibold text-orange-50 transition-colors hover:bg-orange-700 sm:mr-0 sm:px-5 sm:py-3 sm:text-lg lg:px-10" >Contact me</a></li>
                     </ul>
                 </nav>
             </div>

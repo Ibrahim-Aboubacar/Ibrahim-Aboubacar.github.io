@@ -12,9 +12,9 @@ export default function MyWork() {
 
     const [currentTabClasses, setCurrentTabClasses] = useState('left-0');
     const tabState = {
-        all: 'left-0',
+        all: 'left-0 pl-[10px]',
         dev: 'left-1/3',
-        graphics: 'left-2/3',
+        graphics: 'left-2/3 pr-[10px]',
     };
 
     const handleTabChange = (tab) => {
@@ -26,26 +26,26 @@ export default function MyWork() {
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-violet-200" style={{ backgroundSize: 40, backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='2' height='2' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f27e02' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E\")" }}></div>
             <div className="mx-auto max-w-screen-xl px-4 pt-10">
                 <div className="py-10 font-poppins">
-                    <h2 className="text-center text-5xl font-bold text-slate-800">
+                    <h2 className="text-center text-3xl font-bold text-slate-800 md:text-5xl">
                         Recent Projects
                     </h2>
-                    <p className="mt-5 text-center text-xl text-slate-600">
+                    <p className="mt-2 text-center text-slate-600 md:mt-5 md:text-xl">
                         Check out some of my latest Web Development and Graphic Design projects.
                     </p>
                 </div>
-                <div className="sticky z-10 flex select-none items-center justify-center py-14 font-roboto font-semibold text-slate-700 [inset-block-start:65px] sm:text-xl">
-                    <div className="relative grid grid-cols-3 items-center gap-5 rounded-[20px] bg-gradient-to-tr from-orange-300 to-violet-300 px-3 py-5 text-center shadow-md shadow-violet-200">
+                <div className="sticky z-10 flex select-none items-center justify-center pb-14 pt-0 font-roboto text-sm font-semibold text-slate-700 [inset-block-start:75px] sm:py-14 sm:text-xl sm:[inset-block-start:65px]">
+                    <div className="relative grid grid-cols-3 items-center gap-0 rounded-[20px] bg-gradient-to-tr from-orange-300 to-violet-300 px-3 py-5 text-center shadow-md shadow-violet-200 sm:gap-5">
                         <div className="absolute inset-0 p-5">
-                            <span className={"absolute bottom-0 top-0 z-[1] w-1/3 px-[10px] py-2 transition-all duration-700" + " " + (currentTabClasses)}>
+                            <span className={"absolute bottom-0 top-0 z-[1] w-1/3 py-2 transition-all duration-700 sm:px-[10px]" + " " + (currentTabClasses)}>
                                 <span className="block h-full w-full rounded-xl bg-orange-600/80 bg-blend-screen"></span>
                             </span>
                         </div>
-                        <span className={"relative z-[2] cursor-pointer px-3 transition-all duration-700" + " " + (workToShow == '*' && 'text-orange-50')} onClick={() => handleTabChange('all')}>All</span>
-                        <span className={"relative z-[2] cursor-pointer px-3 transition-all duration-700" + " " + (workToShow == 'dev' && 'text-orange-50')} onClick={() => handleTabChange('dev')}>Developement</span>
-                        <span className={"relative z-[2] cursor-pointer px-3 transition-all duration-700" + " " + (workToShow == 'graphics' && 'text-orange-50')} onClick={() => handleTabChange('graphics')}>Graphics Design</span>
+                        <span className={"relative z-[2] cursor-pointer px-1 transition-all duration-700 sm:px-3" + " " + (workToShow == '*' && 'text-orange-50')} onClick={() => handleTabChange('all')}>All</span>
+                        <span className={"relative z-[2] cursor-pointer px-1 transition-all duration-700 sm:px-3" + " " + (workToShow == 'dev' && 'text-orange-50')} onClick={() => handleTabChange('dev')}>Developement</span>
+                        <span className={"relative z-[2] cursor-pointer px-1 transition-all duration-700 sm:px-3" + " " + (workToShow == 'graphics' && 'text-orange-50')} onClick={() => handleTabChange('graphics')}>Graphics <span className="hidden sm:inline">Design</span></span>
                     </div>
                 </div>
-                <div className="grid grid-cols-1 gap-5 px-4 md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-5 sm:px-4 md:grid-cols-2">
                     <AnimatePresence>
                         {(workToShow == '*' || workToShow == 'dev') && (
                             <ProjectCard key={1} type="dev" tools={['html', 'css', 'alpine.js', 'php', 'mysql']} title={"Free Website for NGOs Project"} image={freeWebsiteForNgos}>
