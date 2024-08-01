@@ -37,7 +37,7 @@ function Header() {
                 </p>
             </div>
             <div className="relative mx-auto h-10 max-w-screen-xl rounded-[15px] pl-6 pr-2 font-poppins text-slate-900 shadow sm:h-16 sm:rounded-[20px]">
-                <span className="absolute inset-0 z-[-1] rounded-[15px] bg-gray-50/60 backdrop-blur-md sm:rounded-[20px]"></span>
+                <span className="absolute inset-0 z-[-1] rounded-[15px] bg-slate-50/70 backdrop-blur-sm sm:rounded-[20px]"></span>
                 <nav className="flex h-full justify-between gap-4">
                     <div className="flex h-full items-center">
                         <div className="text-nowrap font-fira font-medium sm:text-xl">

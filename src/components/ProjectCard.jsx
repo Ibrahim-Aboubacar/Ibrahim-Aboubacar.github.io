@@ -19,8 +19,8 @@ export default function ProjectCard({ image = '', type = 'dev', title = 'Logo de
             className="group relative flex">
             {/* BACKGROUND ANIMATION */}
             <div className="absolute inset-0 overflow-hidden rounded-[20px]">
-                <div className="absolute left-1/2 top-[30%] aspect-square h-full w-[210%] origin-center -translate-x-1/2 -translate-y-1/2">
-                    <div className="absolute aspect-square w-full animate-spin rounded-full bg-gradient-to-tr from-violet-300 to-orange-300 opacity-0 transition-all duration-700 group-hover:opacity-100" style={{ animation: 'spin 2s linear infinite' }}></div>
+                <div className="absolute left-1/2 top-[30%] aspect-square h-full w-[320%] md:w-[270%] origin-center -translate-x-1/2 -translate-y-1/2">
+                    <div className="absolute aspect-square w-full animate-spin rounded-full bg-gradient-to-tr from-violet-300 to-orange-300 opacity-100 transition-all duration-700 md:opacity-0 group-hover:opacity-100" style={{ animation: 'spin 2s linear infinite' }}></div>
                 </div>
             </div>
             <div className="flex-1 p-3">
@@ -28,7 +28,7 @@ export default function ProjectCard({ image = '', type = 'dev', title = 'Logo de
                     <div className="sm:p-6">
                         <div className="relative aspect-video w-full overflow-hidden rounded-b-none border border-violet-300 shadow-sm shadow-violet-200 sm:rounded-lg">
                             <div className="h-full w-full">
-                                <img className="h-full w-full object-cover" src={image || ("https://via.assets.so/img.jpg?w=900&h=450&tc=orange&bg=gray&t=" + (type == 'dev' ? "DEV" : "GRAPHIC"))} />
+                                <img loading="lazy" className="h-full w-full object-cover" src={image || ("https://via.assets.so/img.jpg?w=900&h=450&tc=orange&bg=gray&t=" + (type == 'dev' ? "DEV" : "GRAPHIC"))} />
                             </div>
                             <div className={"absolute bottom-2 left-2 flex w-[28px] items-center gap-2 overflow-hidden rounded-[5px] bg-slate-700/50 px-2 py-2 text-[10px] font-bold text-slate-50 transition-all duration-500 group-hover:bg-orange-600/50 sm:w-[44px] sm:p-3 sm:text-sm" + " " + (type == 'dev' ? "group-hover:w-[120px] sm:group-hover:w-[158px]" : "group-hover:w-[118px] sm:group-hover:w-[168px]")}>
                                 <span>

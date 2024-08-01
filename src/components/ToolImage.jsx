@@ -12,7 +12,7 @@ export default function ToolImage({ tool }) {
     }
     return (
         <a href={link} target="_blank" className="flex aspect-square w-7 items-center justify-center sm:w-10" title={"Click to visite website of " + tool}>
-            <img className="h-full" src={image} alt={tool + " icon"} />
+            <img loading="lazy" className="h-full" src={image} alt={tool + " icon"} />
         </a>
     )
 }
