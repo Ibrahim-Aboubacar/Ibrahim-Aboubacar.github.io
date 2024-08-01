@@ -644,6 +644,42 @@ video {
   top: 100%;
 }
 
+.-right-2{
+  right: -0.5rem;
+}
+
+.left-5{
+  left: 1.25rem;
+}
+
+.left-4{
+  left: 1rem;
+}
+
+.left-6{
+  left: 1.5rem;
+}
+
+.bottom-3{
+  bottom: 0.75rem;
+}
+
+.top-40{
+  top: 10rem;
+}
+
+.right-4{
+  right: 1rem;
+}
+
+.right-7{
+  right: 1.75rem;
+}
+
+.right-8{
+  right: 2rem;
+}
+
 .z-0{
   z-index: 0;
 }
@@ -797,6 +833,14 @@ video {
   height: 100%;
 }
 
+.h-8{
+  height: 2rem;
+}
+
+.h-9{
+  height: 2.25rem;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
@@ -859,6 +903,14 @@ video {
 
 .w-screen{
   width: 100vw;
+}
+
+.w-8{
+  width: 2rem;
+}
+
+.w-9{
+  width: 2.25rem;
 }
 
 .max-w-screen-xl{
@@ -1092,9 +1144,8 @@ video {
   border-color: rgb(2 132 199 / var(--tw-border-opacity));
 }
 
-.border-slate-300{
-  --tw-border-opacity: 1;
-  border-color: rgb(203 213 225 / var(--tw-border-opacity));
+.border-slate-300\/20{
+  border-color: rgb(203 213 225 / 0.2);
 }
 
 .border-slate-400{
@@ -1105,6 +1156,10 @@ video {
 .border-slate-50{
   --tw-border-opacity: 1;
   border-color: rgb(248 250 252 / var(--tw-border-opacity));
+}
+
+.border-slate-500\/50{
+  border-color: rgb(100 116 139 / 0.5);
 }
 
 .border-slate-600{
@@ -1130,52 +1185,6 @@ video {
 .border-violet-500{
   --tw-border-opacity: 1;
   border-color: rgb(139 92 246 / var(--tw-border-opacity));
-}
-
-.border-orange-700{
-  --tw-border-opacity: 1;
-  border-color: rgb(194 65 12 / var(--tw-border-opacity));
-}
-
-.border-orange-900{
-  --tw-border-opacity: 1;
-  border-color: rgb(124 45 18 / var(--tw-border-opacity));
-}
-
-.border-orange-900\/50{
-  border-color: rgb(124 45 18 / 0.5);
-}
-
-.border-orange-700\/50{
-  border-color: rgb(194 65 12 / 0.5);
-}
-
-.border-orange-700\/30{
-  border-color: rgb(194 65 12 / 0.3);
-}
-
-.border-orange-500\/30{
-  border-color: rgb(249 115 22 / 0.3);
-}
-
-.border-orange-500\/20{
-  border-color: rgb(249 115 22 / 0.2);
-}
-
-.border-slate-500\/20{
-  border-color: rgb(100 116 139 / 0.2);
-}
-
-.border-slate-500\/50{
-  border-color: rgb(100 116 139 / 0.5);
-}
-
-.border-orange-500\/50{
-  border-color: rgb(249 115 22 / 0.5);
-}
-
-.border-slate-300\/20{
-  border-color: rgb(203 213 225 / 0.2);
 }
 
 .bg-gray-200{
@@ -1257,6 +1266,22 @@ video {
 .bg-violet-50{
   --tw-bg-opacity: 1;
   background-color: rgb(245 243 255 / var(--tw-bg-opacity));
+}
+
+.bg-slate-50\/60{
+  background-color: rgb(248 250 252 / 0.6);
+}
+
+.bg-slate-200\/60{
+  background-color: rgb(226 232 240 / 0.6);
+}
+
+.bg-slate-50\/80{
+  background-color: rgb(248 250 252 / 0.8);
+}
+
+.bg-slate-50\/70{
+  background-color: rgb(248 250 252 / 0.7);
 }
 
 .bg-gradient-to-b{
@@ -1482,6 +1507,10 @@ video {
   padding-top: 2rem;
 }
 
+.pr-1{
+  padding-right: 0.25rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -1546,6 +1575,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-black{
   font-weight: 900;
 }
@@ -1590,9 +1624,9 @@ video {
   color: rgb(255 237 213 / var(--tw-text-opacity));
 }
 
-.text-orange-300{
+.text-orange-200{
   --tw-text-opacity: 1;
-  color: rgb(253 186 116 / var(--tw-text-opacity));
+  color: rgb(254 215 170 / var(--tw-text-opacity));
 }
 
 .text-orange-50{
@@ -1689,55 +1723,6 @@ video {
   color: rgb(109 40 217 / var(--tw-text-opacity));
 }
 
-.text-orange-200{
-  --tw-text-opacity: 1;
-  color: rgb(254 215 170 / var(--tw-text-opacity));
-}
-
-.text-orange-700{
-  --tw-text-opacity: 1;
-  color: rgb(194 65 12 / var(--tw-text-opacity));
-}
-
-.text-orange-900\/70{
-  color: rgb(124 45 18 / 0.7);
-}
-
-.text-orange-500\/50{
-  color: rgb(249 115 22 / 0.5);
-}
-
-.text-orange-500\/40{
-  color: rgb(249 115 22 / 0.4);
-}
-
-.text-orange-600\/40{
-  color: rgb(234 88 12 / 0.4);
-}
-
-.text-orange-400\/40{
-  color: rgb(251 146 60 / 0.4);
-}
-
-.text-orange-800\/40{
-  color: rgb(154 52 18 / 0.4);
-}
-
-.text-orange-900{
-  --tw-text-opacity: 1;
-  color: rgb(124 45 18 / var(--tw-text-opacity));
-}
-
-.text-slate-950{
-  --tw-text-opacity: 1;
-  color: rgb(2 6 23 / var(--tw-text-opacity));
-}
-
-.text-slate-200{
-  --tw-text-opacity: 1;
-  color: rgb(226 232 240 / var(--tw-text-opacity));
-}
-
 .underline{
   text-decoration-line: underline;
 }
@@ -1802,6 +1787,12 @@ video {
 
 .backdrop-blur-md{
   --tw-backdrop-blur: blur(12px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.backdrop-blur-sm{
+  --tw-backdrop-blur: blur(4px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
@@ -2287,8 +2278,16 @@ html {
     display: flex;
   }
 
+  .md\:h-11{
+    height: 2.75rem;
+  }
+
   .md\:min-h-\[unset\]{
     min-height: unset;
+  }
+
+  .md\:w-11{
+    width: 2.75rem;
   }
 
   .md\:grid-cols-2{
@@ -2311,13 +2310,25 @@ html {
     gap: 0.5rem;
   }
 
+  .md\:gap-3{
+    gap: 0.75rem;
+  }
+
   .md\:overflow-visible{
     overflow: visible;
+  }
+
+  .md\:p-4{
+    padding: 1rem;
   }
 
   .md\:px-0{
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .md\:pr-3{
+    padding-right: 0.75rem;
   }
 
   .md\:text-start{
@@ -2337,6 +2348,11 @@ html {
   .md\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 

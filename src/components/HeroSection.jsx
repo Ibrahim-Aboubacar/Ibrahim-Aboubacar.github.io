@@ -46,9 +46,9 @@ function HeroSection() {
                     </div>
                     <div className='hiddenmd: relative flex'>
                         <div className="absolute -right-16 bottom-0 z-0 aspect-square w-[500px] -translate-x-1/2 rounded-full bg-orange-600/30 blur-3xl"></div>
-                        <img src={img} className='md:mr-0_ z-10 ml-auto mr-auto w-3/4' alt="portrait jeune homme expressif portant costume formel" />
-                        <LittelBullet className="absolute bottom-8 left-8 z-10 md:bottom-5 md:left-0" title="Back End" subtitle="Development" variant='red' logo={<img src="https://laravel.com/img/logomark.min.svg" alt="Laravel Logo" />} />
-                        <LittelBullet className="absolute right-0 top-48 z-10 sm:right-14 sm:top-72 md:right-0 md:top-52 lg:right-6 lg:top-64" title="Front End" subtitle="Development" variant='sky' logo={(
+                        <img loading="lazy" src={img} className='md:mr-0_ z-10 ml-auto mr-auto w-3/4' alt="portrait jeune homme expressif portant costume formel" />
+                        <LittelBullet className="absolute bottom-3 left-6 z-10 md:bottom-5 md:left-0" title="Back End" subtitle="Development" variant='red' logo={<img loading="lazy" src="https://laravel.com/img/logomark.min.svg" alt="Laravel Logo" />} />
+                        <LittelBullet className="absolute right-8 top-40 z-10 sm:right-14 sm:top-72 md:right-0 md:top-52 lg:right-6 lg:top-64" title="Front End" subtitle="Development" variant='sky' logo={(
                             <svg width="100%" height="100%" viewBox="-10.5 -9.45 21 18.9" fill="none" className="flex w-24 origin-center self-center">
                                 <circle cx="0" cy="0" r="2" fill="currentColor"></circle>
                                 <g stroke="currentColor" strokeWidth="1" fill="none">
@@ -98,13 +98,13 @@ function LittelBullet({ title, subtitle, logo, variant = "sky", className }) {
     const vari = localVariant[variant];
     return (
         <div className={className}>
-            <div className={("flex items-center gap-3 overflow-hidden rounded-full p-4 ") + vari["background"] + " " + vari["text"]}>
-                <span className={("flex h-11 w-11 items-center justify-center rounded-full border-[4px] p-2 " + vari["border"]) + (" ") + vari["background"]} style={{ boxShadow: "0 0px 10px -5px rgb(239 68 68)" }}>
+            <div className={("flex items-center gap-2 md:gap-3 overflow-hidden rounded-full p-2 md:p-4 ") + vari["background"] + " " + vari["text"]}>
+                <span className={("flex h-9 md:h-11 w-9 md:w-11 items-center justify-center rounded-full border-[4px] p-2 " + vari["border"]) + (" ") + vari["background"]} style={{ boxShadow: "0 0px 10px -5px rgb(239 68 68)" }}>
                     {logo}
                 </span>
-                <div className="pr-3">
-                    <p className='text-xl font-semibold'>{title}</p>
-                    <p className='text-sm'>{subtitle}</p>
+                <div className="pr-2 md:pr-3">
+                    <p className='md:text-xl font-semibold'>{title}</p>
+                    <p className='text-xs md:text-sm'>{subtitle}</p>
                 </div>
             </div>
         </div>

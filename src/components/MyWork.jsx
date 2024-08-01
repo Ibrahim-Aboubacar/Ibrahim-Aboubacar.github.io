@@ -10,7 +10,7 @@ import leCiskolateur from "../assets/imgs/le-ciskolateur-curency-converter-app-b
 export default function MyWork() {
     const [workToShow, setWorkToShow] = useState('*');
 
-    const [currentTabClasses, setCurrentTabClasses] = useState('left-0');
+    const [currentTabClasses, setCurrentTabClasses] = useState('left-0 pl-[10px]');
     const tabState = {
         all: 'left-0 pl-[10px]',
         dev: 'left-1/3',
