@@ -19,8 +19,8 @@ export default function ProjectCard({ image = '', type = 'dev', title = 'Logo de
             className="group relative flex">
             {/* BACKGROUND ANIMATION */}
             <div className="absolute inset-0 overflow-hidden rounded-[20px]">
-                <div className="absolute left-1/2 top-[30%] aspect-square h-full w-[210%] origin-center -translate-x-1/2 -translate-y-1/2">
-                    <div className="absolute aspect-square w-full animate-spin rounded-full bg-gradient-to-tr from-violet-300 to-orange-300 opacity-0 transition-all duration-700 group-hover:opacity-100" style={{ animation: 'spin 2s linear infinite' }}></div>
+                <div className="absolute left-1/2 top-[30%] aspect-square h-full w-[320%] md:w-[270%] origin-center -translate-x-1/2 -translate-y-1/2">
+                    <div className="absolute aspect-square w-full animate-spin rounded-full bg-gradient-to-tr from-violet-300 to-orange-300 opacity-100 transition-all duration-700 md:opacity-0 group-hover:opacity-100" style={{ animation: 'spin 2s linear infinite' }}></div>
                 </div>
             </div>
             <div className="flex-1 p-3">

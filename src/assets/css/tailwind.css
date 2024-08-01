@@ -592,8 +592,8 @@ video {
   bottom: 0.5rem;
 }
 
-.bottom-8{
-  bottom: 2rem;
+.bottom-3{
+  bottom: 0.75rem;
 }
 
 .left-0{
@@ -620,20 +620,24 @@ video {
   left: 0.75rem;
 }
 
-.left-8{
-  left: 2rem;
+.left-6{
+  left: 1.5rem;
 }
 
 .right-0{
   right: 0px;
 }
 
+.right-8{
+  right: 2rem;
+}
+
 .top-0{
   top: 0px;
 }
 
-.top-48{
-  top: 12rem;
+.top-40{
+  top: 10rem;
 }
 
 .top-\[30\%\]{
@@ -642,42 +646,6 @@ video {
 
 .top-full{
   top: 100%;
-}
-
-.-right-2{
-  right: -0.5rem;
-}
-
-.left-5{
-  left: 1.25rem;
-}
-
-.left-4{
-  left: 1rem;
-}
-
-.left-6{
-  left: 1.5rem;
-}
-
-.bottom-3{
-  bottom: 0.75rem;
-}
-
-.top-40{
-  top: 10rem;
-}
-
-.right-4{
-  right: 1rem;
-}
-
-.right-7{
-  right: 1.75rem;
-}
-
-.right-8{
-  right: 2rem;
 }
 
 .z-0{
@@ -817,12 +785,12 @@ video {
   height: 2.5rem;
 }
 
-.h-11{
-  height: 2.75rem;
-}
-
 .h-3{
   height: 0.75rem;
+}
+
+.h-9{
+  height: 2.25rem;
 }
 
 .h-\[55px\]{
@@ -831,14 +799,6 @@ video {
 
 .h-full{
   height: 100%;
-}
-
-.h-8{
-  height: 2rem;
-}
-
-.h-9{
-  height: 2.25rem;
 }
 
 .min-h-screen{
@@ -851,10 +811,6 @@ video {
 
 .w-10{
   width: 2.5rem;
-}
-
-.w-11{
-  width: 2.75rem;
 }
 
 .w-14{
@@ -881,8 +837,12 @@ video {
   width: 1.75rem;
 }
 
-.w-\[210\%\]{
-  width: 210%;
+.w-9{
+  width: 2.25rem;
+}
+
+.w-\[270\%\]{
+  width: 270%;
 }
 
 .w-\[28px\]{
@@ -905,12 +865,8 @@ video {
   width: 100vw;
 }
 
-.w-8{
-  width: 2rem;
-}
-
-.w-9{
-  width: 2.25rem;
+.w-\[320\%\]{
+  width: 320%;
 }
 
 .max-w-screen-xl{
@@ -1192,10 +1148,6 @@ video {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.bg-gray-50\/60{
-  background-color: rgb(249 250 251 / 0.6);
-}
-
 .bg-green-600{
   --tw-bg-opacity: 1;
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
@@ -1249,6 +1201,10 @@ video {
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
+.bg-slate-50\/70{
+  background-color: rgb(248 250 252 / 0.7);
+}
+
 .bg-slate-700\/50{
   background-color: rgb(51 65 85 / 0.5);
 }
@@ -1266,22 +1222,6 @@ video {
 .bg-violet-50{
   --tw-bg-opacity: 1;
   background-color: rgb(245 243 255 / var(--tw-bg-opacity));
-}
-
-.bg-slate-50\/60{
-  background-color: rgb(248 250 252 / 0.6);
-}
-
-.bg-slate-200\/60{
-  background-color: rgb(226 232 240 / 0.6);
-}
-
-.bg-slate-50\/80{
-  background-color: rgb(248 250 252 / 0.8);
-}
-
-.bg-slate-50\/70{
-  background-color: rgb(248 250 252 / 0.7);
 }
 
 .bg-gradient-to-b{
@@ -1471,10 +1411,6 @@ video {
   padding-right: 0.5rem;
 }
 
-.pr-3{
-  padding-right: 0.75rem;
-}
-
 .pr-\[10px\]{
   padding-right: 10px;
 }
@@ -1505,10 +1441,6 @@ video {
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pr-1{
-  padding-right: 0.25rem;
 }
 
 .text-center{
@@ -1731,6 +1663,10 @@ video {
   opacity: 0;
 }
 
+.opacity-100{
+  opacity: 1;
+}
+
 .bg-blend-screen{
   background-blend-mode: screen;
 }
@@ -1783,12 +1719,6 @@ video {
 .drop-shadow-2xl{
   --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.backdrop-blur-md{
-  --tw-backdrop-blur: blur(12px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .backdrop-blur-sm{
@@ -2290,6 +2220,10 @@ html {
     width: 2.75rem;
   }
 
+  .md\:w-\[270\%\]{
+    width: 270%;
+  }
+
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2345,14 +2279,18 @@ html {
     line-height: 1.75rem;
   }
 
+  .md\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
   .md\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 
-  .md\:text-sm{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+  .md\:opacity-0{
+    opacity: 0;
   }
 }
 

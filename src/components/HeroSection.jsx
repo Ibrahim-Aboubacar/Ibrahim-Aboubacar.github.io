@@ -36,7 +36,7 @@ function HeroSection() {
                         </h1>
                         <div className="mt-3 text-slate-600 md:mt-5">
                             <p className="text-base font-medium md:text-lg">
-                                I specialize in creating elegant and functional user interfaces,
+                                I am specialized in creating elegant and functional user interfaces,
                                 combining expertise in PHP and front-end technologies with 3 years of experience in the field of web development.
                             </p>
                         </div>
