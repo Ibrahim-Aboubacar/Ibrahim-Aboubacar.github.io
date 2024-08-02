@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 dist-ssr
 *.local
+my-portfolio-431222-a1525e0119af.json
 
 # Editor directories and files
 .vscode/*
