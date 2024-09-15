@@ -10,7 +10,18 @@ const ProjectCardPropTypes = {
     tools: PropTypes.array,
 };
 export default function ProjectCard({ image = '', type = 'dev', title = 'Logo design for Hadi Delice', children = 'lorem', tools = [] }) {
+    const getAltFromImage = (url) => {
+        try {
+            let arr = url.split('/');
+            const nameArr = (arr[arr.length - 1]).split('.')
+            return nameArr[0].replaceAll('-', ' ')
+        } catch (error) {
+            console.log(error);
+            return 'Alt name not found!';
+        }
+    }
 
+    const imageAlt = getAltFromImage(image);
     return (
         <motion.div
             initial={{ opacity: 0, y: '-20px', transform: 'skew(5deg, 5deg)', }}
@@ -28,7 +39,7 @@ export default function ProjectCard({ image = '', type = 'dev', title = 'Logo de
                     <div className="sm:p-6">
                         <div className="relative aspect-video w-full overflow-hidden rounded-b-none border border-violet-300 shadow-sm shadow-violet-200 sm:rounded-lg">
                             <div className="h-full w-full">
-                                <img loading="lazy" className="h-full w-full object-cover" src={image || ("https://via.assets.so/img.jpg?w=900&h=450&tc=orange&bg=gray&t=" + (type == 'dev' ? "DEV" : "GRAPHIC"))} />
+                                <img loading="lazy" className="h-full w-full object-cover" src={image || ("https://via.assets.so/img.jpg?w=900&h=450&tc=orange&bg=gray&t=" + (type == 'dev' ? "DEV" : "GRAPHIC"))} alt={imageAlt} />
                             </div>
                             <div className={"absolute bottom-2 left-2 flex w-[28px] items-center gap-2 overflow-hidden rounded-[5px] bg-slate-700/50 px-2 py-2 text-[10px] font-bold text-slate-50 transition-all duration-500 group-hover:bg-orange-600/50 sm:w-[44px] sm:p-3 sm:text-sm" + " " + (type == 'dev' ? "group-hover:w-[120px] sm:group-hover:w-[158px]" : "group-hover:w-[118px] sm:group-hover:w-[168px]")}>
                                 <span>

@@ -1,7 +1,7 @@
 
 import * as PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import whatsappIcon from "../assets/imgs/icons/whatsapp.png";
+import whatsappIcon from "../assets/imgs/icons/whatsapp.webp";
 import { useRef } from "react";
 import useContact from "../hooks/useContact";
 export default function Footer() {
