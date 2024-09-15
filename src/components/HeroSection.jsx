@@ -2,7 +2,7 @@ import Typed from 'typed.js';
 // import { Link } from "react-router-dom";
 import * as PropTypes from "prop-types";
 import { useRef, useEffect } from 'react';
-import img from '../assets/imgs/portrait-jeune-homme-expressif-portant-costume-formel.png'
+import img from '../assets/imgs/portrait-jeune-homme-expressif-portant-costume-formel.webp'
 import useContact from '../hooks/useContact';
 function HeroSection() {
     const { whatsappLink } = useContact();

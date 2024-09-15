@@ -1,8 +1,8 @@
 import phpIcon from "./assets/imgs/icons/php.svg";
 import laravelIcon from "./assets/imgs/icons/laravel.svg";
-import htmlIcon from "./assets/imgs/icons/html.png";
-import jqueryIcon from "./assets/imgs/icons/jquery.png";
-import gitIcon from "./assets/imgs/icons/git.png";
+import htmlIcon from "./assets/imgs/icons/html.webp";
+import jqueryIcon from "./assets/imgs/icons/jquery.webp";
+import gitIcon from "./assets/imgs/icons/git.webp";
 import tailwindcssIcon from "./assets/imgs/icons/tailwindcss.svg";
 import bootstrapIcon from "./assets/imgs/icons/bootstrap.svg";
 import css3Icon from "./assets/imgs/icons/css3.svg";
@@ -11,13 +11,14 @@ import javascriptIcon from "./assets/imgs/icons/javascript.svg";
 import typescriptIcon from "./assets/imgs/icons/typescript.svg";
 import mysqlIcon from "./assets/imgs/icons/mysql.svg";
 import windowsIcon from "./assets/imgs/icons/windows.svg";
-import composerIcon from "./assets/imgs/icons/composer.png";
+import composerIcon from "./assets/imgs/icons/composer.webp";
 import adobePremiereProIcon from "./assets/imgs/icons/adobe-premiere-pro.svg";
 import visualStudioCodeIcon from "./assets/imgs/icons/visual-studio-code.svg";
 import apacheIcon from "./assets/imgs/icons/apache.svg";
 import reactIcon from "./assets/imgs/icons/react.svg";
 import alpineIcon from "./assets/imgs/icons/alpine.svg";
 import wordpressIcon from "./assets/imgs/icons/wordpress.svg";
+import slimIcon from "./assets/imgs/icons/slim.webp";
 
 const iconsData = {
     php: {
@@ -103,6 +104,10 @@ const iconsData = {
     wordpress: {
         icon: wordpressIcon,
         site_url: "https://wordpress.org/",
+    },
+    slim: {
+        icon: slimIcon,
+        site_url: "https://www.slimframework.com/",
     },
 };
 

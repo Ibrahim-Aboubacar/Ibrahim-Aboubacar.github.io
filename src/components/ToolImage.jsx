@@ -11,7 +11,7 @@ export default function ToolImage({ tool }) {
         link = link + "?utm_source=" + encodeURI('https://ibrahim-aboubacar.github.io/');
     }
     return (
-        <a href={link} target="_blank" className="flex aspect-square w-7 items-center justify-center sm:w-10" title={"Click to visite website of " + tool}>
+        <a href={link} target="_blank" className="flex aspect-square w-7 items-center justify-center sm:w-10" aria-label={"Click to visite website of " + tool} title={"Click to visite website of " + tool}>
             <img loading="lazy" className="h-full" src={image} alt={tool + " icon"} />
         </a>
     )
