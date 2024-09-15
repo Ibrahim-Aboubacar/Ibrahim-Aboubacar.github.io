@@ -46,7 +46,7 @@ function HeroSection() {
                     </div>
                     <div className='hiddenmd: relative flex'>
                         <div className="absolute -right-16 bottom-0 z-0 aspect-square w-[500px] -translate-x-1/2 rounded-full bg-orange-600/30 blur-3xl"></div>
-                        <img loading="lazy" src={img} className='md:mr-0_ z-10 ml-auto mr-auto w-3/4' alt="portrait jeune homme expressif portant costume formel" />
+                        <img src={img} className='md:mr-0_ z-10 ml-auto mr-auto w-3/4' alt="portrait jeune homme expressif portant costume formel" />
                         <LittelBullet className="absolute bottom-3 left-6 z-10 md:bottom-5 md:left-0" title="Back End" subtitle="Development" variant='red' logo={<img loading="lazy" src="https://laravel.com/img/logomark.min.svg" alt="Laravel Logo" />} />
                         <LittelBullet className="absolute right-8 top-40 z-10 sm:right-14 sm:top-72 md:right-0 md:top-52 lg:right-6 lg:top-64" title="Front End" subtitle="Development" variant='sky' logo={(
                             <svg width="100%" height="100%" viewBox="-10.5 -9.45 21 18.9" fill="none" className="flex w-24 origin-center self-center">

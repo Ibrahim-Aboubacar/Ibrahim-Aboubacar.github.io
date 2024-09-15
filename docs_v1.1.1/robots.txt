@@ -1,0 +1,10 @@
+# Bloquer tous les robots d'exploration de certaines sections
+# User-agent: *
+# Disallow: /admin/
+
+# Permettre l'accées au reste du site
+User-agent: *
+Allow: /
+
+# Lien vers le sitemap pour une meilleure indexation
+Sitemap: https://ibrahim-aboubacar.github.io/sitemap.txt
