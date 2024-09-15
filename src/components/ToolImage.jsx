@@ -4,9 +4,6 @@ import useIcon from "../hooks/useIcon";
 
 export default function ToolImage({ tool }) {
     let [image, link] = useIcon(tool);
-    // const publicPath = "/src/assets/imgs/icons/";
-    // let image = publicPath;
-    // let link = '/';
     if (link != '/') {
         link = link + "?utm_source=" + encodeURI('https://ibrahim-aboubacar.github.io/');
     }

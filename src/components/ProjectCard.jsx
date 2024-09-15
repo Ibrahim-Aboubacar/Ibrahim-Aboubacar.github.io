@@ -1,6 +1,7 @@
 import * as PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import ToolImage from "./ToolImage";
+import getFileName from "../utils/helpers";
 
 const ProjectCardPropTypes = {
     image: PropTypes.string,
@@ -10,18 +11,8 @@ const ProjectCardPropTypes = {
     tools: PropTypes.array,
 };
 export default function ProjectCard({ image = '', type = 'dev', title = 'Logo design for Hadi Delice', children = 'lorem', tools = [] }) {
-    const getAltFromImage = (url) => {
-        try {
-            let arr = url.split('/');
-            const nameArr = (arr[arr.length - 1]).split('.')
-            return nameArr[0].replaceAll('-', ' ')
-        } catch (error) {
-            console.log(error);
-            return 'Alt name not found!';
-        }
-    }
 
-    const imageAlt = getAltFromImage(image);
+    const imageAlt = getFileName(image);
     return (
         <motion.div
             initial={{ opacity: 0, y: '-20px', transform: 'skew(5deg, 5deg)', }}
