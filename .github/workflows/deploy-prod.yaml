@@ -15,12 +15,18 @@ jobs:
               with:
                   ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-            - name: Deploy via SSH
+            - name: Deploying code to server
               run: |
                   ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} '
                     cd /srv/cisko.dev/prod && 
                     git fetch origin && 
-                    git reset --hard origin/main && 
+                    git reset --hard origin/main
+                  '
+
+            - name: Installing dependences and building project
+              run: |
+                  ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} '
+                    cd /srv/cisko.dev/prod && 
                     pnpm install && 
                     pnpm run build
                   '
