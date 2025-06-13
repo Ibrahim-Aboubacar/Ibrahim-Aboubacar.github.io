@@ -1,0 +1,26 @@
+name: Build and Deploy to site to prod
+on:
+    push:
+        branches: [main]
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup SSH
+              uses: webfactory/ssh-agent@v0.5.4
+              with:
+                  ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+            - name: Deploy via SSH
+              run: |
+                  ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} '
+                    cd /srv/cisko.dev/prod/front && 
+                    git checkout main && 
+                    git pull origin main && ls -al && 
+                    pnpm install && 
+                    pnpm run build
+                  '

@@ -1,0 +1,26 @@
+name: Build and Deploy to site to stage
+on:
+    push:
+        branches: [stage]
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup SSH
+              uses: webfactory/ssh-agent@v0.5.4
+              with:
+                  ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+            - name: Deploy via SSH
+              run: |
+                  ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} '
+                    cd /srv/cisko.dev/stage/front && 
+                    git checkout stage && 
+                    git pull origin stage && ls -al && 
+                    pnpm install && 
+                    pnpm run build
+                  '
