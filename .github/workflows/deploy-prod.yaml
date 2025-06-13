@@ -18,6 +18,7 @@ jobs:
             - name: Deploying code to server and Installing dependences and building project
               run: |
                   ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} '
+                    set -xe && 
                     cd /srv/cisko.dev/prod && 
                     git fetch origin && 
                     git reset --hard origin/main && 
