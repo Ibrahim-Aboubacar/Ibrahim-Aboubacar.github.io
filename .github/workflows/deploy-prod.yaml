@@ -27,6 +27,7 @@ jobs:
               run: |
                   ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} '
                     cd /srv/cisko.dev/prod && 
+                    which pnpm && 
                     pnpm install && 
                     pnpm run build
                   '
