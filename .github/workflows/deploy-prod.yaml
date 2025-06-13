@@ -18,7 +18,7 @@ jobs:
             - name: Deploy via SSH
               run: |
                   ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} '
-                    cd /srv/cisko.dev/prod/front && 
+                    cd /srv/cisko.dev/prod && 
                     git checkout main && 
                     git pull origin main && ls -al && 
                     pnpm install && 
