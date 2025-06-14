@@ -22,6 +22,7 @@ jobs:
                     cd /srv/cisko.dev/prod
                     git fetch origin
                     git reset --hard origin/main
+                    curl -fsSL https://get.pnpm.io/install.sh | sh -
                     pnpm install
                     pnpm run build
                   '
