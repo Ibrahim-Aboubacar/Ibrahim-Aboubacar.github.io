@@ -15,12 +15,21 @@ jobs:
               with:
                   ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-            - name: Deploy via SSH
+            - name: Deploying code to server and Installing dependences and building project
               run: |
                   ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} '
-                    cd /srv/cisko.dev/stage && 
-                    git fetch origin && 
-                    git reset --hard origin/stage && 
-                    pnpm install && 
+                    export NVM_DIR="$HOME/.nvm"
+                    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+                    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+                    nvm use --lts
+
+                    export PNPM_HOME="$HOME/.local/share/pnpm"
+                    export PATH="$PNPM_HOME:$PATH"
+
+                    cd /srv/cisko.dev/stage
+                    git fetch origin
+                    git reset --hard origin/stage
+
+                    pnpm install
                     pnpm run build
                   '
