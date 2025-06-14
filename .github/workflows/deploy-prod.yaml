@@ -19,7 +19,8 @@ jobs:
               run: |
                   ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} '
                     set -xe
-                    source ~/.bashrc
+                    export PNPM_HOME="$HOME/.local/share/pnpm"
+                    export PATH="$PNPM_HOME:$PATH"
                     cd /srv/cisko.dev/prod
                     git fetch origin
                     git reset --hard origin/main
