@@ -22,7 +22,6 @@ jobs:
                     cd /srv/cisko.dev/prod && 
                     git fetch origin && 
                     git reset --hard origin/main && 
-                    which pnpm && 
-                    pnpm install && 
-                    pnpm run build
+                    npm install && 
+                    npm run build
                   '
