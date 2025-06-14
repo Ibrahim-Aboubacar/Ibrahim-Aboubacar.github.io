@@ -1,5 +1,4 @@
-name: Deploy React App with pnpm to VPS
-
+name: Build and Deploy to site to prod
 on:
     push:
         branches: [main]
@@ -7,42 +6,23 @@ on:
 jobs:
     deploy:
         runs-on: ubuntu-latest
-
         steps:
-            - name: 📦 Checkout source code
-              uses: actions/checkout@v3
+            - name: Checkout code
+              uses: actions/checkout@v4
 
-            - name: 📐 Setup Node.js
-              uses: actions/setup-node@v3
+            - name: Setup SSH
+              uses: webfactory/ssh-agent@v0.5.4
               with:
-                  node-version: 20
-                  cache: "pnpm"
+                  ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-            - name: 🧰 Install pnpm
-              run: corepack enable && corepack prepare pnpm@latest --activate
-
-            - name: 📥 Install dependencies
-              run: pnpm install
-
-            - name: 🏗️ Build project
-              run: pnpm run build
-
-            - name: 📤 Deploy build folder to VPS
-              uses: appleboy/scp-action@v0.1.4
-              with:
-                  host: ${{ secrets.SSH_HOST }}
-                  username: ${{ secrets.SSH_USER }}
-                  port: ${{ secrets.SSH_PORT }}
-                  key: ${{ secrets.SSH_PRIVATE_KEY }}
-                  source: "docs" # ou 'build' selon ton framework
-                  target: "/srv/cisko.dev/prod/front/docs" # ou /srv/cisko.dev/prod/public
-
-            - name: 🔁 Reload Nginx (optionnel)
-              uses: appleboy/ssh-action@v0.1.10
-              with:
-                  host: ${{ secrets.SSH_HOST }}
-                  username: ${{ secrets.SSH_USER }}
-                  port: ${{ secrets.SSH_PORT }}
-                  key: ${{ secrets.SSH_PRIVATE_KEY }}
-                  script: |
-                      sudo systemctl reload nginx
+            - name: Deploying code to server and Installing dependences and building project
+              run: |
+                  ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} '
+                    export PNPM_HOME="$HOME/.local/share/pnpm"
+                    export PATH="$PNPM_HOME:$PATH"
+                    cd /srv/cisko.dev/prod
+                    git fetch origin
+                    git reset --hard origin/main
+                    pnpm install
+                    pnpm run build
+                  '
