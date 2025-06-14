@@ -22,7 +22,6 @@ jobs:
                     cd /srv/cisko.dev/prod 
                     git fetch origin 
                     git reset --hard origin/main 
-                    alias pnpm="/home/deployer/.nvm/versions/node/v22.16.0/bin/pnpm"
-                    pnpm install 
-                    pnpm run build
+                    /home/deployer/.nvm/versions/node/v22.16.0/bin/pnpm install 
+                    /home/deployer/.nvm/versions/node/v22.16.0/bin/pnpm run build
                   '
