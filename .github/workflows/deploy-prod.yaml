@@ -19,6 +19,7 @@ jobs:
               run: |
                   ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} '
                     set -xe
+                    source ~/.bashrc
                     cd /srv/cisko.dev/prod
                     git fetch origin
                     git reset --hard origin/main
