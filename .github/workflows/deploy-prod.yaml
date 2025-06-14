@@ -22,7 +22,7 @@ jobs:
                     cd /srv/cisko.dev/prod
                     git fetch origin
                     git reset --hard origin/main
-                    whoami
+                    whoami > tmp.txt
                     pnpm install
                     pnpm run build
                   '
