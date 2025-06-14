@@ -19,7 +19,7 @@ jobs:
                   cache: "pnpm"
 
             - name: 🧰 Install pnpm
-              run: npm install -g pnpm
+              run: corepack enable && corepack prepare pnpm@latest --activate
 
             - name: 📥 Install dependencies
               run: pnpm install
@@ -34,7 +34,7 @@ jobs:
                   username: ${{ secrets.SSH_USER }}
                   port: ${{ secrets.SSH_PORT }}
                   key: ${{ secrets.SSH_PRIVATE_KEY }}
-                  source: "dist" # ou 'build' selon ton framework
+                  source: "docs" # ou 'build' selon ton framework
                   target: "/srv/cisko.dev/prod/front/docs" # ou /srv/cisko.dev/prod/public
 
             - name: 🔁 Reload Nginx (optionnel)
